@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - vCard</title>
+    <title>Ibrahim Tahir - vCard</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,7 +11,18 @@
             text-align: center;
             padding: 50px;
         }
-        .container {
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: white;
+        }
+        .logo-container img {
+            max-width: 200px;
+        }
+        .content-container {
+            display: none;
             background-color: white;
             padding: 20px;
             border-radius: 10px;
@@ -19,10 +30,21 @@
             max-width: 600px;
             margin: auto;
         }
+        .profile-picture {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+        h1 {
+            margin-top: 0;
+        }
+        .contact-info p {
+            margin: 5px 0;
+        }
         .btn {
             display: inline-block;
             padding: 10px 20px;
-            margin-top: 20px;
+            margin: 10px;
             background-color: #007bff;
             color: white;
             text-decoration: none;
@@ -31,13 +53,40 @@
         .btn:hover {
             background-color: #0056b3;
         }
+        .icon {
+            width: 30px;
+            height: 30px;
+        }
     </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                document.querySelector(".logo-container").style.display = "none";
+                document.querySelector(".content-container").style.display = "block";
+            }, 2000); // Change 2000 to the desired loading duration in milliseconds
+        });
+    </script>
 </head>
 <body>
-    <div class="container">
-        <h1>Your Name</h1>
-        <p>Welcome to my landing page. Click the button below to download my vCard.</p>
-        <a href="vcard.vcf" class="btn" download>Download vCard</a>
+    <div class="logo-container">
+        <img src="logo.png" alt="Institute Logo">
+    </div>
+    <div class="content-container">
+        <img src="profile.jpg" alt="Profile Picture" class="profile-picture">
+        <h1>Ibrahim Tahir</h1>
+        <h2>Graduate Student</h2>
+        <div class="contact-info">
+            <p><strong>Mobile:</strong> +971553355590</p>
+            <p><strong>Email:</strong> imt243@nyu.edu</p>
+            <p><strong>Organization:</strong> NYU</p>
+            <p><strong>Occupation:</strong> Graduate Student</p>
+            <p><strong>Website:</strong> <a href="https://tinyurl.com/Ibrahim-Tahir">https://tinyurl.com/Ibrahim-Tahir</a></p>
+        </div>
+        <div>
+            <a href="https://www.linkedin.com/in/ibrahim-tahir/" class="btn"><img src="linkedin-logo.png" alt="LinkedIn" class="icon"> LinkedIn</a>
+            <a href="https://scholar.google.ae/citations?hl=en&user=4L9QaTkAAAAJ" class="btn"><img src="google-scholar-icon.png" alt="Google Scholar" class="icon"> Google Scholar</a>
+            <a href="https://qrco.de/bfB5Z9" class="btn"><img src="cv-icon.png" alt="CV" class="icon"> CV</a>
+        </div>
     </div>
 </body>
 </html>
