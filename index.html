@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ibrahim Tahir - vCard</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             background-color: #f4f4f4;
             text-align: center;
             padding: 50px;
+            color: #3f51b5;
         }
         .logo-container {
             display: flex;
@@ -17,6 +20,7 @@
             align-items: center;
             height: 100vh;
             background-color: white;
+            animation: fadeOut 2s forwards;
         }
         .logo-container img {
             max-width: 200px;
@@ -26,16 +30,17 @@
             background-color: white;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             max-width: 600px;
             margin: auto;
+            animation: fadeIn 1s forwards;
         }
         .profile-picture {
             border-radius: 50%;
             width: 150px;
             height: 150px;
         }
-        h1 {
+        h1, h2 {
             margin-top: 0;
         }
         .contact-info p {
@@ -45,17 +50,26 @@
             display: inline-block;
             padding: 10px 20px;
             margin: 10px;
-            background-color: #007bff;
+            background-color: #3f51b5;
             color: white;
             text-decoration: none;
             border-radius: 5px;
+            transition: background-color 0.3s ease;
         }
         .btn:hover {
-            background-color: #0056b3;
+            background-color: #303f9f;
         }
         .icon {
-            width: 30px;
-            height: 30px;
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+        @keyframes fadeOut {
+            0% { opacity: 1; }
+            100% { opacity: 0; display: none; }
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; display: block; }
         }
     </style>
     <script>
@@ -63,7 +77,7 @@
             setTimeout(function() {
                 document.querySelector(".logo-container").style.display = "none";
                 document.querySelector(".content-container").style.display = "block";
-            }, 2000); // Change 2000 to the desired loading duration in milliseconds
+            }, 2000);
         });
     </script>
 </head>
@@ -83,9 +97,9 @@
             <p><strong>Website:</strong> <a href="https://tinyurl.com/Ibrahim-Tahir">https://tinyurl.com/Ibrahim-Tahir</a></p>
         </div>
         <div>
-            <a href="https://www.linkedin.com/in/ibrahim-tahir/" class="btn"><img src="linkedin-logo.png" alt="LinkedIn" class="icon"> LinkedIn</a>
-            <a href="https://scholar.google.ae/citations?hl=en&user=4L9QaTkAAAAJ" class="btn"><img src="google-scholar-icon.png" alt="Google Scholar" class="icon"> Google Scholar</a>
-            <a href="https://qrco.de/bfB5Z9" class="btn"><img src="cv-icon.png" alt="CV" class="icon"> CV</a>
+            <a href="https://www.linkedin.com/in/ibrahim-tahir/" class="btn"><i class="material-icons icon">person</i>LinkedIn</a>
+            <a href="https://scholar.google.ae/citations?hl=en&user=4L9QaTkAAAAJ" class="btn"><i class="material-icons icon">school</i>Google Scholar</a>
+            <a href="https://qrco.de/bfB5Z9" class="btn"><i class="material-icons icon">description</i>CV</a>
         </div>
     </div>
 </body>
