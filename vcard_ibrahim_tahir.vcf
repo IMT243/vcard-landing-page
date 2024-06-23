@@ -1,0 +1,18 @@
+BEGIN:VCARD
+VERSION:3.0
+PRODID:-//QR-Code-Generator.com//EN
+N:Tahir;Ibrahim;;;
+FN:Ibrahim Tahir
+ORG:NYU;
+TITLE:Graduate Student
+EMAIL;TYPE=PREF,INTERNET:imt243@nyu.edu
+TEL;TYPE=CELL,voice:+971553355590
+TEL;TYPE=WORK,voice:
+TEL;TYPE=WORK,fax:
+ADR;TYPE=WORK;type=pref:;; ;;;;
+URL:https://tinyurl.com/Ibrahim-Tahir
+
+NOTE:
+
+REV:2008-04-24T19:52:43Z
+END:VCARD
